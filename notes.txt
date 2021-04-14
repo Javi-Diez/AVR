@@ -1,0 +1,25 @@
+#Javier Diez
+#This is were I am going to write my start up config. I will try to make it into a script later on. but for now ill just copy and past it.
+
+# To log in to the jetson
+screen /dev/ttyACM0 115200 -L
+# Please note, don't dettach the screen because I been having a lot of difficulty reconnecting to it.
+sudo chmod 666 /dev/ttyUSB0 # tells the bot which usb is the lidar
+
+x11vnc -display :0 -auth /var/run/lightdm/root/\:0
+# this will run the server to remote in
+
+# this is how you ssh into my specific bot. The reason is to start a virtual desktop from the bot
+ssh -L 5901:localhost:5901 -N -f -l javi 10.42.0.169
+
+# inside the terminal of the virtual desktop enter this so you can change the resolution
+xrandr --fb 1270x720
+
+https://www.hackster.io/shahizat005/building-a-map-using-lidar-with-ros-melodic-on-jetson-nano-2f92dd/#toc-step-14---how-to-build-a-map-using-hector-slam-16
+# I am going to be trying to do this to how to build it
+
+#I am changing the hector slam right not to not use an odemtry. again following the instructions from the website above.
+
+# to be able to run catkin i must state
+source devel/setup.bash
+# I have to install python-catkin-tools

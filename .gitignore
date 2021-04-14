@@ -1,0 +1,6 @@
+### Exclude items from git profile
+
+/venv
+
+# idea stuff
+.idea
