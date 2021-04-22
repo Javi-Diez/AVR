@@ -1,0 +1,8 @@
+# Javier Diez
+# this file will my list of things that I want to get done.
+
+TODO get the motor drive running
+TODO understand how to run the motors
+TODO develop and algorithm that would allow the bot to navigate around the room to build a map and then stop when its
+    feels like its confident in the map
+To achieve the last one would be another larger task that should be broken more. will do after getting the motors running
